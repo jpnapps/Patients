@@ -3,6 +3,57 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.1565" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/bottom_navigation_colors.xml" value="0.1565" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/button_color_selector.xml" value="0.1565" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/cardview_border.xml" value="0.1565" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.1565" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.124" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/ic_search_24.xml" value="0.15" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/drawable/more_bg.xml" value="0.1565" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_add_patient.xml" value="0.3107255520504732" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_add_pitem.xml" value="0.4" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_backup.xml" value="0.2" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_life_cycle.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_patient_detail.xml" value="0.264" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_pmanage.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_search_patient.xml" value="0.23489583333333333" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_service_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_splash.xml" value="0.152" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_version.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/activity_view_logos.xml" value="0.1578125" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/alert_ok.xml" value="0.264" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/dialog_two_buttons.xml" value="0.221875" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/dialog_yes_no.xml" value="0.253125" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/fragment_egg_timer.xml" value="0.23854166666666668" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/fragment_home.xml" value="0.17916666666666667" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/fragment_more.xml" value="0.264" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/fragment_profile.xml" value="0.19791666666666666" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/image_pick_view.xml" value="0.536" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/layout_date_picker_segmentation.xml" value="0.21822916666666667" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/layout_loading_indicator.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/layout/rcv_item_pitem.xml" value="0.4" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/menu/bottom_nav_menu.xml" value="0.11302083333333333" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.15" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/xml/provider_paths.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidWS/Me/Patients/app/src/main/res/xml/root_preferences.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidWS/Me/Patients/date_time_picker/src/main/res/layout/dt_dialog_time_picker.xml" value="0.1671875" />
+        <entry key="..\:/AndroidWS/Me/Patients/date_time_picker/src/main/res/layout/dt_dialog_week_picker.xml" value="0.1671875" />
+        <entry key="..\:/AndroidWS/Me/Patients/date_time_picker/src/main/res/layout/dt_layout_date_picker.xml" value="0.1671875" />
+        <entry key="..\:/AndroidWS/Me/Patients/date_time_picker/src/main/res/layout/dt_layout_date_picker_globalization.xml" value="0.1671875" />
+        <entry key="..\:/AndroidWS/Me/Patients/date_time_picker/src/main/res/layout/dt_number_picker_material.xml" value="0.1671875" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/drawable/divider_1.xml" value="0.1" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/layout/activity_pmanage.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/layout/activity_web.xml" value="0.23645833333333333" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/layout/fragment_profile.xml" value="0.35933806146572106" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/layout/rcv_item_pitem.xml" value="0.23645833333333333" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/layout/rcv_item_profile_small_box.xml" value="0.4" />
+        <entry key="..\:/AndroidWS/Me/PortFolio/app/src/main/res/layout/rcv_item_qa.xml" value="0.23645833333333333" />
         <entry key="..\:/AndroidWs/Me/Portfolio/app/src/main/res/drawable/ic_android_24dp.xml" value="0.10740740740740741" />
         <entry key="..\:/AndroidWs/Me/Portfolio/app/src/main/res/layout/activity_add_pitem.xml" value="0.4" />
         <entry key="..\:/AndroidWs/Me/Portfolio/app/src/main/res/layout/activity_background_thread.xml" value="0.10572916666666667" />

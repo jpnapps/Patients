@@ -3,36 +3,17 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/mobile_navigation"
-            app:startDestination="@+id/navigation_home">
-
-    <fragment
-        android:id="@+id/navigation_profile"
-        android:name="com.jpndev.portfolio.presentation.ui.profile.ProfileFragment"
-        android:label="@string/navigation_profile" />
-  <!--  <fragment
-        android:id="@+id/navigation_top_qa"
-        android:name="com.jpndev.portfolio.presentation.ui.topqa.TopQAFragment"
-        android:label="@string/navigation_top_qa" />-->
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.jpndev.portfolio.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+            app:startDestination="@+id/navigation_dashboard">
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.jpndev.portfolio.ui.dashboard.DashboardFragment"
+        android:name="com.jpndev.patients.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.jpndev.portfolio.presentation.ui.notify.EggTimerFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
         android:id="@+id/navigation_more"
-        android:name="com.jpndev.portfolio.ui.more.MoreFragment"
+        android:name="com.jpndev.patients.ui.more.MoreFragment"
         tools:layout="@layout/fragment_more"
         android:label="@string/title_more" />
 

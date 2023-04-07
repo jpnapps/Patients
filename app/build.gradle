@@ -4,15 +4,16 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
+   // id 'kotlin-parcelize'
 }
 apply from: '../versions.gradle'
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         //applicationId "com.jpndev.portfolio"
-        applicationId "com.jpndev.portfolio.dev"
+        applicationId "com.jpndev.patients"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -38,12 +39,13 @@ android {
         }
 
         release {
-            //    storeFile file(project.property("MyApp.signing"))
-            storeFile file('../playerj.jks')
+            //storeFile file(project.property("MyApp.signing"))
+            //storeFile file('../playerj.jks')
+             storeFile file('../jpnapps.jks')
             storePassword project.property("MyApp.signing.password")
             keyAlias project.property("MyApp.signing.alias")
             keyPassword project.property("MyApp.signing.alias.password")
-            v2SigningEnabled false
+            v2SigningEnabled true
         }
     }
 
@@ -158,10 +160,13 @@ dependencies {
 
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     implementation project(path: ':utillibrary')
+    implementation project(path: ':date_time_picker')
+
     implementation 'androidx.preference:preference:1.1.1'
 
     //local db
     implementation("androidx.room:room-runtime:$room_version")
+
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
     // optional - Kotlin Extensions and Coroutines support for Room
@@ -209,54 +214,32 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
-    testImplementation 'junit:junit:4.13.2'
+   /* testImplementation 'junit:junit:4.13.2'
     testImplementation 'com.squareup.okhttp3:mockwebserver:4.9.0'
     testImplementation "com.google.truth:truth:1.1"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-
+*/
     //Glide
     implementation "com.github.bumptech.glide:glide:$Glide_version"
     kapt "com.github.bumptech.glide:compiler:$Glide_version"
+    //implementation "com.github.Pradyuman7:LookAtMe:Version2.0"
 
-    implementation "com.github.Pradyuman7:LookAtMe:Version2.0"
-
-
-    //Exo videoplayer
-
-    // dependancy for exoplayer
-
-    implementation "com.google.android.exoplayer:exoplayer:r2.4.0"
-
-// for core support in exoplayer.
-
-    implementation "com.google.android.exoplayer:exoplayer-core:r2.4.0"
-
-// for adding dash support in our exoplayer.
-
-
-    implementation "com.google.android.exoplayer:exoplayer-dash:r2.4.0"
-
-// for adding hls support in exoplayer.
-
-    implementation "com.google.android.exoplayer:exoplayer-hls:r2.4.0"
-
-// for smooth streaming of video in our exoplayer.
-
-    implementation "com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0"
-
-// for generating default ui of exoplayer
-
-    implementation "com.google.android.exoplayer:exoplayer-ui:r2.4.0"
-
-
-    implementation "androidx.work:work-runtime-ktx:$work_version"
-
-    implementation("androidx.hilt:hilt-work:1.0.0")
+    /*implementation "androidx.work:work-runtime-ktx:$work_version"
+    implementation("androidx.hilt:hilt-work:1.0.0")*/
     // When using Kotlin.
     kapt("androidx.hilt:hilt-compiler:1.0.0")
-    implementation 'androidx.biometric:biometric:1.0.0-rc01'
 
-
+    //implementation 'androidx.biometric:biometric:1.0.0-rc01'
+    //implementation 'com.github.rkahir21:ImagePicker:1.0'
+    implementation  'io.ak1.pix:piximagepicker:1.6.3'
+    //implementation 'com.github.mahimrocky:ShowMoreText:1.0.2'
+    implementation 'com.github.tntkhang:full-screen-image-view-library:1.1.0'
+    implementation "com.paulrybitskyi.persistentsearchview:persistentsearchview:1.1.4"
+    //implementation 'com.github.loperSeven:DateTimePicker:0.6.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.4'
+    //implementation("com.ehsanmsz:msz-progress-indicator:0.2.0")
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+    implementation 'com.airbnb.android:lottie:4.1.0'
+   // implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
 }

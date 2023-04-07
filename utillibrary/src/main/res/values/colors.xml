@@ -59,15 +59,15 @@
   <color name="black_color_2"> #212121</color>
 
   <color name="black_color_3"> #EAEBF9</color>
-
-  <color name="colorPrimaryDark">#3A6CF4</color>
+  <color name="colorPrimaryDark">#0078BF</color>
+ <!-- <color name="colorPrimaryDark">#3A6CF4</color>-->
   <color name="colorPrimary">#0EC3F4</color>
   <color name="colorPrimary2">#3A6CF4</color>
   <color name="colorAccent">#3389FB</color>
   <color name="colorPrimaryDarkbrown">#3A6CF4</color>
   <color name="colorPrimarybrown2">#0EC3F4</color>
-
-
+<!--  <color name="moreCardColor">#026fb0</color>-->
+  <color name="moreCardColor">#025f96</color>
  <!-- <color name="colorPrimary">#0EC3F4</color>
   <color name="colorPrimaryDark">#0EC3F4</color>
   <color name="colorPrimaryDark">#0EC3F4</color>
@@ -337,6 +337,7 @@
   <color name="md_teal_A200">#64FFDA</color>
   <color name="md_teal_A400">#1DE9B6</color>
   <color name="md_teal_A700">#00BFA5</color>
+  <color name="md_green_new">#00ca8d</color>
   <color name="transparent">#00ffffff</color>
   <!-- green -->
   <color name="md_green_50">#E8F5E9</color>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.jpndev.patients.ui.patient.PatientDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_clay"
+        style="@style/Base_Home.MatchParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <!-- <com.jpndev.patients.custom.GradientChart
+            android:id="@+id/gradientChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_curve_bottom"
+            app:plusColorStart="@color/white"
+            app:plusColorEnd="@color/white"
+            app:minusColorStart="@color/grey_hex_fc"
+            app:minusColorEnd="@color/grey_hex_fc"
+            app:zoom="15"
+            app:isBezier="true"/>-->
+        <com.jpndev.patients.custom.CurveView
+            android:id="@+id/curvedView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            app:startColor="@color/colorPrimaryDark"
+            app:startColorX="0.5"
+            app:startColorY="-25"
+            app:endColor="@color/colorPrimarybrown2"
+            app:endColorX="0.5"
+            app:endColorY="25"
+            app:firstControlPointY="1.2"
+            app:firstControlPointX="0.4"
+            app:secondControlPointY="0.8"
+            app:secondControlPointX="0.6"
+            app:curveShadowColor="@color/white"
+            app:curveShadowRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_v_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_h_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/close_dimv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24"
+            app:layout_constraintLeft_toRightOf="@+id/g_h_left"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/_4sdp"
+            app:height_percentage="8"
+            app:parameter="fixed_ratio"
+            app:width_percentage="10" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_h_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/editDimv"
+            style="@style/DIMV_Template1"
+            android:layout_marginTop="0dp"
+            android:visibility="visible"
+            app:layout_constraintRight_toLeftOf="@+id/g_h_right"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/white"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/_4sdp"
+            app:height_percentage="8"
+            app:parameter="fixed_ratio"
+            app:width_percentage="10" />
+
+<!--         android:onClick="@{() -> viewmodel.showEditPatientActivity()}"-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_h_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/actionbar_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="editDimv,close_dimv" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+        <androidx.cardview.widget.CardView
+            style="@style/BASE_CARD_1"
+            android:id="@+id/basicDetailCardV"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_12sdp"
+            app:cardElevation="@dimen/_9sdp"
+            app:cardMaxElevation="@dimen/_9sdp"
+            app:cardCornerRadius="@dimen/_1sdp"
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/g_left"
+            app:layout_constraintRight_toLeftOf="@+id/g_right"
+            app:layout_constraintTop_toBottomOf="@+id/actionbar_barrier">
+
+            <LinearLayout
+                style="@style/NOCOLOR_MatchParent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_14sdp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/nameTxv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Base_TXV_1"
+                    android:textColor="@color/black"
+                    android:text="@{``+viewmodel.patient_mld.name}"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ageTxv"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Base_TXV_3"
+                    android:text="@{``+viewmodel.patient_mld.age}"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phoneTxv"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Base_TXV_3"
+                    app:visibleIf="@{viewmodel.patient_mld.phone}"
+                    android:text="@{``+viewmodel.patient_mld.phone}"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/emailTxv"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:visibleIf="@{viewmodel.patient_mld.email}"
+                    style="@style/Base_TXV_3"
+                    android:text="@{``+viewmodel.patient_mld.email}"
+                    />
+            <LinearLayout
+                android:id="@+id/dateLlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lastConsulatedTxv"
+                    style="@style/Base_TXV_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_consulated_semi_colon"
+                    android:textColor="@color/b_hint_1" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lastConsulatedDateTxv"
+                    style="@style/Base_TXV_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="@{``+viewmodel.conversionTime(viewmodel.patient_mld.lastConsulatedDate.time)}" />
+            </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/BASE_CARD_1"
+            android:id="@+id/notesCardV"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_12sdp"
+            app:cardElevation="@dimen/_9sdp"
+            app:cardMaxElevation="@dimen/_9sdp"
+            app:cardCornerRadius="@dimen/_1sdp"
+            android:layout_width="0dp"
+            app:visibleIf="@{viewmodel.patient_mld.notes}"
+            app:layout_constraintLeft_toRightOf="@+id/g_left"
+            app:layout_constraintRight_toLeftOf="@+id/g_right"
+            app:layout_constraintTop_toBottomOf="@+id/basicDetailCardV">
+
+            <LinearLayout
+                style="@style/NOCOLOR_MatchParent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_14sdp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/notesTxv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Base_TXV_2"
+                    android:textColor="@color/black"
+                    android:text="@string/notes"
+                    />
+               <!-- <com.skyhope.showmoretextview.ShowMoreTextView
+                    android:id="@+id/notesDetailSMTxv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Base_TXV_3"
+                    android:text="@{viewmodel.patient_mld.notes}"
+                    />-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/notesDetailSMTxv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    style="@style/Base_TXV_3"
+                    android:text="@string/notes"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/BASE_CARD_1"
+            android:id="@+id/prescriptionCardV"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_12sdp"
+            app:cardElevation="@dimen/_9sdp"
+            app:cardMaxElevation="@dimen/_9sdp"
+            app:cardCornerRadius="@dimen/_1sdp"
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/g_left"
+            app:layout_constraintTop_toBottomOf="@+id/notesCardV">
+
+            <LinearLayout
+                style="@style/NOCOLOR_MatchParent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/grey_hex_fc"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+                <com.jpndev.patients.custom.DeviceFitImageView
+                    android:id="@+id/image1Dimv"
+                    style="@style/DIMV_Template1"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/egg_icon_plain"
+                    android:scaleType="centerCrop"
+                    app:height_percentage="30"
+                    app:parameter="fixed_ratio"
+                    app:width_percentage="40" />
+                <com.jpndev.patients.custom.DeviceFitImageView
+                    android:id="@+id/image2Dimv"
+                    style="@style/DIMV_Template1"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/egg_icon_plain"
+                    android:scaleType="centerCrop"
+                    app:height_percentage="30"
+                    app:parameter="fixed_ratio"
+                    app:width_percentage="40" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_curve_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+    <!--    <com.jpndev.patients.custom.CurveView
+            android:id="@+id/curvedView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            app:startColor="#FFA78B"
+            app:startColorX="0.5"
+            app:startColorY="-25"
+            app:endColor="#DE9BE8"
+            app:endColorX="0.5"
+            app:endColorY="25"
+            app:firstControlPointY="-1.2"
+            app:firstControlPointX="0.4"
+            app:secondControlPointY="-1.8"
+            app:secondControlPointX="0.9"
+            app:curveShadowColor="#DE9BE8"
+            app:curveShadowRadius="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/guideline_curve_bottom"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

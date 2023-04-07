@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/imageRlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_border"
+        android:padding="@dimen/_4sdp"
+        android:visibility="visible">
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/imageDimv"
+            style="@style/DIMV_Template1"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/egg_icon_plain"
+            app:height_percentage="15"
+            app:parameter="fixed_ratio"
+            app:width_percentage="18" />
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/addImageDimv"
+            style="@style/DIMV_Template1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+            app:height_percentage="15"
+            app:parameter="fixed_ratio"
+            app:width_percentage="18" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageCloseRlay"
+        android:visibility="gone"
+        android:layout_alignRight="@+id/imageRlay"
+        android:layout_alignTop="@+id/imageRlay"
+        android:padding="@dimen/_4sdp"
+        android:background="@color/transparent_black_17"
+        android:orientation="vertical">
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/imageCloseDimv"
+            style="@style/DIMV_Template1"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_close_24"
+            android:tint="@color/red"
+            app:parameter="aspect_width"
+            app:width_percentage="6" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/addImageRlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_border"
+        android:padding="@dimen/_4sdp">
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/addImageDimv"
+            style="@style/DIMV_Template1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+            app:height_percentage="15"
+            app:parameter="fixed_ratio"
+            app:width_percentage="18" />
+    </RelativeLayout>-->
+</RelativeLayout>

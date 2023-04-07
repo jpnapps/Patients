@@ -80,5 +80,44 @@
             <enum name="square" value="5"/>
         </attr>
     </declare-styleable>
+    <!-- styleable attributes for cardiogram values view -->
+    <declare-styleable name="ImagePickView">
+        <attr name="show_close_icon" format="boolean" />
+        <attr name="add_image_mode" format="boolean" />
+        <attr name="levelUnit" format="string" />
+    </declare-styleable>
 
+    <declare-styleable name="CurveView">
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+
+        <attr name="startColorX" format="float" />
+        <attr name="startColorY" format="float" />
+        <attr name="endColorX" format="float" />
+        <attr name="endColorY" format="float" />
+
+        <attr name="firstControlPointX" format="float" />
+        <attr name="firstControlPointY" format="float" />
+        <attr name="secondControlPointX" format="float" />
+        <attr name="secondControlPointY" format="float" />
+
+        <attr name="curveShadowRadius" format="dimension"/>
+        <attr name="curveShadowColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientChart">
+
+        <!-- chart gradient colors -->
+        <attr name="chartLineColor" format="color"/>
+        <attr name="plusColorStart" format="color"/>
+        <attr name="plusColorEnd" format="color"/>
+        <attr name="minusColorStart" format="color"/>
+        <attr name="minusColorEnd" format="color"/>
+
+        <!-- other -->
+        <attr name="isBezier" format="boolean"/>
+        <attr name="bezierIntensity" format="float"/>
+        <attr name="zoom" format="integer"/>
+
+    </declare-styleable>
 </resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp">
+    <!--   android:descendantFocusability="beforeDescendants"
+                 android:focusableInTouchMode="true"-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_lefticon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_righticon_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/appname_ctxv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_patients_anim"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_lefticon_right"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_righticon_left"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_v_30" />
+
+    <TextView
+        android:id="@+id/version_ctxv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimarybrown2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_lefticon_right"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_righticon_left"
+
+        app:layout_constraintTop_toBottomOf="@+id/appname_ctxv" />
+
+
+    <com.jpndev.patients.custom.DeviceFitImageView
+
+        android:id="@+id/appicon_dimv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher"
+        app:height_percentage="12"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_lefticon_right"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_righticon_left"
+        app:layout_constraintTop_toBottomOf="@+id/version_ctxv"
+        app:parameter="fixed_ratio"
+        app:width_percentage="20" />
+
+    <TextView
+        android:id="@+id/latestversion_ctxv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_lefticon_right"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_righticon_left"
+        app:layout_constraintTop_toBottomOf="@+id/appicon_dimv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

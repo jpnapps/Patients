@@ -48,7 +48,7 @@
         android:id="@+id/g_v_top"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.001"/>
-    <com.jpndev.portfolio.custom.DeviceFitImageView
+    <com.jpndev.patients.custom.DeviceFitImageView
         android:id="@+id/profile_dimv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,14 +105,14 @@ app:height_percentage="45"
                 android:orientation="horizontal"
                 android:layout_margin="@dimen/_1sdp"
                 >
-                <com.jpndev.portfolio.custom.DeviceFitImageView
+                <com.jpndev.patients.custom.DeviceFitImageView
                     android:id="@+id/phoneTxv"
                     style="@style/DIMV_Template1"
                     android:src="@drawable/ic_contact_phone_24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <com.jpndev.portfolio.custom.DeviceFitImageView
+                <com.jpndev.patients.custom.DeviceFitImageView
                     android:id="@+id/phone2Txv"
                     style="@style/DIMV_Template1"
                     android:layout_marginLeft="@dimen/_10sdp"
@@ -120,7 +120,7 @@ app:height_percentage="45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <com.jpndev.portfolio.custom.DeviceFitImageView
+                <com.jpndev.patients.custom.DeviceFitImageView
                     android:id="@+id/mailTxv"
                     style="@style/DIMV_Template1"
                     android:layout_marginLeft="@dimen/_10sdp"
@@ -128,7 +128,7 @@ app:height_percentage="45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <com.jpndev.portfolio.custom.DeviceFitImageView
+                <com.jpndev.patients.custom.DeviceFitImageView
                     android:id="@+id/mail2Txv"
                     style="@style/DIMV_Template1"
                     android:layout_marginLeft="@dimen/_10sdp"
@@ -136,14 +136,14 @@ app:height_percentage="45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <com.jpndev.portfolio.custom.DeviceFitImageView
+                <com.jpndev.patients.custom.DeviceFitImageView
                     android:id="@+id/stackTxv"
                     style="@style/DIMV_Template1"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:src="@drawable/ic_stackoverflow_black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <com.jpndev.portfolio.custom.DeviceFitImageView
+                <com.jpndev.patients.custom.DeviceFitImageView
                     android:id="@+id/linkedlnTxv"
                     style="@style/DIMV_Template1"
                     android:layout_marginLeft="@dimen/_10sdp"

@@ -8,7 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
+    <color name="disabled_color">@color/grey_hex_6c</color>
+    <color name="enable_color">@color/sys_border_color_2</color>
 
     <color name="light_border_color_1">#70BD70</color>
     <color name="light_border_color_2">#13BD13</color>

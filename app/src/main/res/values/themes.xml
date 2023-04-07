@@ -122,7 +122,7 @@
 
         <item name="bg_card_1">@color/app_white_bg</item>
         <item name="bg_card_2">@color/app_white_bg</item>
-        <item name="bg_fab_1">@color/light_border_color_1</item>
+        <item name="bg_fab_1">@color/md_green_new</item>
 
         <item name="bg_rcv_item_1">@color/app_white_bg</item>
         <item name="bg_rcv_item_2">@color/app_white_bg</item>
@@ -213,16 +213,18 @@
 
 
     </style>
+<!--         <item name="colorPrimary">@color/sys_border_color_2</item>-->
     <style name="Theme.App.System" parent="Base.Theme.App">
-        <item name="colorPrimary">@color/sys_border_color_2</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkbrown</item>
+
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/sys_border_color_1</item>
         <item name="primaryTextColor">@color/app_black_txt</item>
         <item name="buttonNormalColor">@color/sys_border_color_1</item>
         <item name="buttonHighlightColor">@color/sys_border_color_2</item>
         <item name="buttonTextColor">@color/app_black_txt</item>
         <item name="iconColor">@color/app_black_txt</item>
-
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
 
         <item name="bg_1">@color/app_white_bg</item>
         <item name="bg_2">@color/app_white_bg</item>
@@ -237,7 +239,7 @@
         <item name="bg_card_2">@color/app_white_bg</item>
 
 
-        <item name="bg_fab_1">@color/light_border_color_1</item>
+        <item name="bg_fab_1">@color/md_green_new</item>
 
         <item name="bg_rcv_item_1">@color/app_white_bg</item>
         <item name="bg_rcv_item_2">@color/app_white_bg</item>
@@ -269,6 +271,7 @@
         <item name="gradient_2">@color/sys_border_color_1</item>
         <item name="gradient_3">@color/sys_border_color_2</item>
         <item name="gradient_4">@color/app_white_bg</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
     </style>
 
 
@@ -277,5 +280,26 @@
         <item name="colorButtonNormal">?attr/buttonNormalColor</item>
         <item name="colorControlHighlight">?attr/buttonHighlightColor</item>
         <item name="android:textColor">?attr/buttonTextColor</item>
+    </style>
+
+    <!--<style name="SplashThemeNew" parent="Theme.App.System">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>-->
+    <style name="SplashThemeNew" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
     </style>
 </resources>

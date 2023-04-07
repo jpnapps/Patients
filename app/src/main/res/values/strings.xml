@@ -1,10 +1,18 @@
 <resources>
-    <string name="app_name">JPN Dev</string>
-    <string name="title_home">Home</string>
+    <string name="app_name">Patients</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Home</string>
     <string name="title_more">More</string>
-
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="age">Age</string>
+    <string name="email">Email</string>
+    <string name="created_at">Last visited</string>
+    <string name="last_visited">Last visited</string>
+    <string name="last_consulated">Last Consulated</string>
+    <string name="last_consulated_semi_colon">Last Consulated : </string>
+    <string name="notes">Notes</string>
+    <string name="add_patient">Add Patient</string>
     <string name="hint_url">Enter URL</string>
 
 
@@ -17,12 +25,21 @@
     <string name="pwd_manager">Password Manager</string>
     <string name="security">Security</string>
     <string name="lifecycle">LifeCycle</string>
-    <string name="videoplay">Video</string>
-
+    <string name="data_management">Data Management</string>
+    <string name="backup">Backup</string>
+    <string name="backup_data">Backup Data</string>
+    <string name="export">Export</string>
     <string name="download">Download</string>
     <string name="service_tasks">Service Task</string>
-
-
+    <string name="about_us">About Us</string>
+    <string name="version">Version</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="delete_dialog_title">Delete ?</string>
+    <string name="delete_dialog_message">Do you really want to delete this patient ? This process cannot be undone </string>
+    <string name="okay">OKAY</string>
+    <string name="sucess_dialog_title">SUCCESS!</string>
+    <string name="error_dialog_title">SORRY!</string>
     <string name="register">REGISTER</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>

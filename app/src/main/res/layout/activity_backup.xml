@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.jpndev.patients.ui.backup.BackupViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_clay"
+        style="@style/Base_Home.MatchParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_h_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/close_dimv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_arrow_back_24"
+            android:tint="@color/black"
+            app:height_percentage="6"
+            app:layout_constraintLeft_toRightOf="@+id/g_h_left"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+            app:parameter="fixed_ratio"
+            app:width_percentage="10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTxv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="@dimen/_10sdp"
+            style="@style/Base_TXV_1"
+            app:layout_constraintLeft_toRightOf="@+id/close_dimv"
+            app:layout_constraintTop_toTopOf="@id/close_dimv"
+            android:textColor="@color/black"
+            android:text="@string/data_management"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_h_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_h_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/actionbar_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="close_dimv,guideline_h_top" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+        <androidx.cardview.widget.CardView
+            style="@style/BASE_CARD_1"
+            android:id="@+id/backupCard"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_12sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardMaxElevation="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardBackgroundColor="@color/color_blue_accent"
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/g_left"
+            app:layout_constraintRight_toLeftOf="@+id/g_right"
+            app:layout_constraintTop_toBottomOf="@+id/actionbar_barrier">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/backupTxv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="@dimen/_10sdp"
+            style="@style/Base_TXV_1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/backup_data"
+            />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/BASE_CARD_1"
+            android:id="@+id/exportCard"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_12sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardMaxElevation="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardBackgroundColor="@color/color_blue_accent"
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/g_left"
+            app:layout_constraintRight_toLeftOf="@+id/g_right"
+            app:layout_constraintTop_toBottomOf="@+id/backupCard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/exportTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:padding="@dimen/_10sdp"
+                style="@style/Base_TXV_1"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/export"
+                />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

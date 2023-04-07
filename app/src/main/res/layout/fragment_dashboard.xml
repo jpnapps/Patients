@@ -1,23 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   style="@style/Base.MatchParent"
-                                                   tools:context=".ui.dashboard.DashboardFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <!-- <data>
+
+         <variable
+             name="viewmodel"
+             type="com.jpndev.patients.ui.patient.PManageViewModel" />
+     </data>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_clay"
+        android:descendantFocusability="blocksDescendants"
+        style="@style/Base_Home.MatchParent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
+
+        <com.jpndev.patients.custom.CurveView
+            android:id="@+id/curvedView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            app:startColor="@color/colorPrimaryDark"
+            app:startColorX="0.5"
+            app:startColorY="-25"
+            app:endColor="@color/colorPrimarybrown2"
+            app:endColorX="0.5"
+            app:endColorY="25"
+            app:firstControlPointY="1.2"
+            app:firstControlPointX="0.4"
+            app:secondControlPointY="0.8"
+            app:secondControlPointX="0.6"
+            app:curveShadowColor="@color/white"
+            app:curveShadowRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_v_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_h_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_h_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_h_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01" />
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/seachDimv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+
+            android:src="@drawable/ic_search_24"
+            android:tint="@color/white"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/_4sdp"
+            app:height_percentage="8"
+            app:parameter="fixed_ratio"
+            app:width_percentage="10"
+            app:layout_constraintRight_toLeftOf="@+id/addDimv"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+            />
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/addDimv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:padding="@dimen/_4sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add_24"
+            android:tint="@color/white"
+            app:height_percentage="8"
+            app:layout_constraintRight_toLeftOf="@+id/g_h_right"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+            app:parameter="fixed_ratio"
+            app:width_percentage="10" />
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:id="@+id/add_btn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:background="@color/black_color_2"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:text="Add"
+            android:visibility="gone"
+            android:textColor="?attr/btn_text_color_1"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintRight_toLeftOf="@+id/g_h_right"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_top" />
+-->
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/actionbar_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="seachDimv,addDimv,guideline_h_top" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/searchGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="seachDimv,addDimv" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_add_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <com.jpndev.patients.custom.DeviceFitImageView
+            android:id="@+id/addPatientDimv"
+            style="@style/DIMV_Template1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_add_24"
+            app:height_percentage="20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_add_top"
+            app:parameter="fixed_ratio"
+            app:width_percentage="25" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addPatientTxv"
+            style="@style/Base_TXV_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="@string/add_patient"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addPatientDimv" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/addPatientGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="addPatientTxv,addPatientDimv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actionbar_barrier"
+            tools:itemCount="3"
+            tools:listitem="@layout/rcv_item_pitem" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="315dp"
+            android:layout_marginEnd="169dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
